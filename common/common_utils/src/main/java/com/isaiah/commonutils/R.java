@@ -55,6 +55,7 @@ public class R {
         r.setSuccess(true);
         r.setCode(ResultCode.SUCCESS);
         r.setMessage("成功");
+        System.out.println("hotfix提交");
         return r;
 
     }

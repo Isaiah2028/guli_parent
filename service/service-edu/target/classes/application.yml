@@ -1,0 +1,27 @@
+server:
+  port: 8081
+
+spring:
+  # 环境设置：dev、test、prod
+  application:
+    name: service-edu
+  #环境配置
+  profiles:
+    active: dev
+
+ #时区东八区
+  jackson:
+    date-format: yyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+  #数据源：
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://121.40.160.237:3306/guli?characterEncoding=utf8
+    username: root
+    password: 123456
+
+#mybatis-plus配置
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false

@@ -57,6 +57,7 @@ public class R {
         r.setMessage("成功");
         System.out.println("hotfix提交");
         System.out.println("master test");
+        System.out.println("hotfix test");
         return r;
 
     }

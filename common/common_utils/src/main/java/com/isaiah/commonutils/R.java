@@ -45,5 +45,19 @@ public class R {
         return r;
     }
 
+    /**
+     * 成功 带参数
+     * @return
+     */
+    public static R Sucess(String code){
+
+        R r = new R();
+        r.setSuccess(true);
+        r.setCode(ResultCode.SUCCESS);
+        r.setMessage("成功");
+        return r;
+
+    }
+
 
 }

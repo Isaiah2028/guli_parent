@@ -58,14 +58,11 @@ public class R {
         System.out.println("hotfix提交");
         System.out.println("master test");
         System.out.println("hotfix test");
-
         System.out.println("push test2");
         System.out.println("push test");
         System.out.println("远程仓库修改使和本地版本不一致");
-
-
         System.out.println("本地master分支修改代码");
-
+        System.out.println("giee提交测试");
         return r;
     }
 

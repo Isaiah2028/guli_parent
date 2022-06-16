@@ -61,6 +61,7 @@ public class R {
 
         System.out.println("push test2");
         System.out.println("push test");
+        System.out.println("远程仓库修改使和本地版本不一致");
 
         return r;
     }

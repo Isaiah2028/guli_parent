@@ -58,6 +58,8 @@ public class R {
         System.out.println("hotfix提交");
         System.out.println("master test");
         System.out.println("hotfix test");
+
+        System.out.println("push test2");
         System.out.println("push test");
 
         return r;

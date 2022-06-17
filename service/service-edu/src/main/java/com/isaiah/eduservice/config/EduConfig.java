@@ -15,13 +15,13 @@ import org.springframework.context.annotation.Configuration;
 public class EduConfig {
 
     /**
-     *逻辑删除插件
+     * 逻辑删除插件
+     *
      * @return
      */
     @Bean
-    public ISqlInjector sqlInjector(){
+    public ISqlInjector sqlInjector() {
         return new LogicSqlInjector();
     }
-
 
 }

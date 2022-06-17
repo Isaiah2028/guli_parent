@@ -17,7 +17,8 @@ spring:
   #数据源：
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://121.40.160.237:3306/guli?characterEncoding=utf8
+    #url: jdbc:mysql://121.40.160.237:3306/guli?serverTimezone=GMT%2B8&characterEncoding=UTF-8
+    url: jdbc:mysql://121.40.160.237:3306/guli?serverTimezone=GMT&characterEncoding=UTF-8
     username: root
     password: 123456
 

@@ -1,11 +1,11 @@
 package com.isaiah.eduservice.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.util.Date;
-import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.io.Serializable;
 
-import com.baomidou.mybatisplus.annotation.TableLogic;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -50,13 +50,21 @@ public class EduTeacher implements Serializable {
     @ApiModelProperty(value = "排序")
     private Integer sort;
 
+//    @ApiModelProperty(value = "逻辑删除 1（true）已删除， 0（false）未删除")
+//    @TableLogic
+//    @TableField(exist = false)
+//    private Integer isDeleted;
+
     @ApiModelProperty(value = "逻辑删除 1（true）已删除， 0（false）未删除")
     @TableLogic
-    private Integer isDeleted;
+    @TableField(fill = FieldFill.INSERT)
+    private Integer isDeleted; //逻辑删除
 
+   @TableField(exist = false)
     @ApiModelProperty(value = "创建时间")
     private Date gmtCreate;
 
+//    @TableField(exist = false)
     @ApiModelProperty(value = "更新时间")
     private Date gmtModified;
 

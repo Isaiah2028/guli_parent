@@ -1,9 +1,8 @@
-package com.isaiah.eduservice.handler;
+package com.isaiah.servicebase.handler;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.reflection.MetaObject;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -34,4 +33,5 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
         this.setFieldValByName("gmtModified",new Date(),metaObject);
 
     }
+
 }

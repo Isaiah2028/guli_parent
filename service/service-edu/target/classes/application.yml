@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8088
 
 spring:
   # 环境设置：dev、test、prod
@@ -9,7 +9,7 @@ spring:
   profiles:
     active: dev
 
- #时区东八区
+  #返回json的全局时间格式 -- 时区东八区
   jackson:
     date-format: yyy-MM-dd HH:mm:ss
     time-zone: GMT+8
@@ -24,5 +24,13 @@ spring:
 
 #mybatis-plus配置
 mybatis-plus:
+  #驼峰式关闭
   configuration:
     map-underscore-to-camel-case: false
+    #日志打印-控制台
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#日志级别
+#logging:
+#  level:
+#    root: debug

@@ -1,6 +1,7 @@
 package com.isaiah.servicebase.exceptionhandler;
 
 import com.isaiah.commonutils.Result;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @date: 2022/6/18 8:57
  */
 @ControllerAdvice
+@Slf4j   //使用到lom-bak日志文件
 public class GlobalExceptionHandler {
 
 
@@ -24,6 +26,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public Result error(Exception e) {
+        log.error(e.getMessage());
         e.printStackTrace();
         return Result.error().massage("执行了全局异常");
     }
@@ -41,9 +44,16 @@ public class GlobalExceptionHandler {
         return Result.error().massage("执行了ArithmeticExceptione异常");
     }
 
+
+    /**
+     * 自定义异常
+     * @param e
+     * @return
+     */
     @ExceptionHandler(GuliException.class)
     @ResponseBody
     public Result error(GuliException e) {
+        log.error(e.getMessage()); //错误日志输出到 error文件里
         e.printStackTrace();
         return Result.error().code(e.getCode()).massage(e.getMessage());
     }

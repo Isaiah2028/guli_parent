@@ -23,7 +23,7 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@ApiModel(value="EduTeacher对象", description="讲师")
+@ApiModel(value = "EduTeacher对象", description = "讲师")
 public class EduTeacher implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -50,23 +50,18 @@ public class EduTeacher implements Serializable {
     @ApiModelProperty(value = "排序")
     private Integer sort;
 
-//    @ApiModelProperty(value = "逻辑删除 1（true）已删除， 0（false）未删除")
-//    @TableLogic
-//    @TableField(exist = false)
-//    private Integer isDeleted;
-
     @ApiModelProperty(value = "逻辑删除 1（true）已删除， 0（false）未删除")
-    @TableLogic
-    @TableField(fill = FieldFill.INSERT)
+    @TableLogic  //逻辑删除
+    @TableField(value = "is_deleted")  //和数据库中的字段映射
     private Integer isDeleted; //逻辑删除
 
-   @TableField(exist = false)
+
     @ApiModelProperty(value = "创建时间")
+    @TableField(value = "gmt_create" ,fill = FieldFill.INSERT_UPDATE) //和数据库中的字段映射
     private Date gmtCreate;
 
-//    @TableField(exist = false)
     @ApiModelProperty(value = "更新时间")
+    @TableField(value = "gmt_modified",fill = FieldFill.INSERT_UPDATE) //和数据库中的字段映射
     private Date gmtModified;
-
 
 }

@@ -29,7 +29,7 @@ public class Result {
     /**
      *无参构造方法私有化
      */
-    private Result(){}
+    public Result(){}
 
 
     /**

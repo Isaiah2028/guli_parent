@@ -1,5 +1,5 @@
 server:
-  port: 8088
+  port: 8081
 
 spring:
   # 环境设置：dev、test、prod
@@ -31,6 +31,14 @@ mybatis-plus:
     #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 #日志级别
-#logging:
-#  level:
-#    root: debug
+logging:
+  level:
+    root: debug
+
+#京东物流用户HMac秘钥
+jingdong:
+  user:
+    secret: 8e1Txmlh7yIGm1Rd0rkWTBL2GFHFf0Bs
+    HMac-username: lop://171/szcdUat   #预发环境
+    host: https://uat-api.jdwl.com     #预发环境
+    LOP-DN: szcd-u.lomir.jd.com   #预发环境
